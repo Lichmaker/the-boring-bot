@@ -25,7 +25,7 @@ return [
         'video'         => true,
         'emoticon'      => true,
         'file'          => true,
-        'emoticon_path' => $path.'emoticons', // 表情库路径（PS：表情库为过滤后不重复的表情文件夹）
+        'emoticon_path' => env('VBOT_TEM_PATH').'emoticons', // 表情库路径（PS：表情库为过滤后不重复的表情文件夹）
     ],
     /*
      * 输出配置项
@@ -40,8 +40,8 @@ return [
     'log'      => [
         'level'         => 'debug',
         'permission'    => 0777,
-        'system'        => $path.'log', // 系统报错日志
-        'message'       => $path.'log', // 消息日志
+        'system'        => env('VBOT_TEM_PATH').'log', // 系统报错日志
+        'message'       => env('VBOT_TEM_PATH').'log', // 消息日志
     ],
     /*
      * 缓存配置项
@@ -51,7 +51,7 @@ return [
         'stores'  => [
             'file' => [
                 'driver' => 'file',
-                'path'   => $path.'cache',
+                'path'   => env('VBOT_TEM_PATH').'cache',
             ],
             'redis' => [
                 'driver'     => 'redis',

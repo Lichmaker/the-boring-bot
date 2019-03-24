@@ -29,9 +29,9 @@ class VBotService
         $options = config('vbot');
 
         $vbot = new Vbot($options);
-        $vbot->messageHandler->setHandler(function ($message) {
-            Text::send($message['from']['UserName'], 'Hi, I\'m Vbot!');
-        });
+//        $vbot->messageHandler->setHandler(function ($message) {
+//            Text::send($message['from']['UserName'], 'Hi, I\'m Vbot!');
+//        });
         $vbot->server->serve();
     }
 }
